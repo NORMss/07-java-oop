@@ -1,8 +1,8 @@
 package com.eltex.data;
 
 public record Post(
-        int id,
-        int authorId,
+        long id,
+        long authorId,
         String author,
         String authorJob,
         String authorAvatar,
@@ -28,8 +28,8 @@ public record Post(
     }
 
     static class Builder {
-        private int id;
-        private int authorId;
+        private long id;
+        private long authorId;
         private String author;
         private String content;
         private String published;
@@ -40,8 +40,8 @@ public record Post(
         private String link;
 
         public Builder(
-                final int id,
-                final int authorId,
+                final long id,
+                final long authorId,
                 final String author,
                 final String content,
                 final String published,
@@ -58,12 +58,12 @@ public record Post(
         }
 
 
-        public Builder setId(final int id) {
+        public Builder setId(final long id) {
             this.id = id;
             return this;
         }
 
-        public Builder setAuthorId(final int authorId) {
+        public Builder setAuthorId(final long authorId) {
             this.authorId = authorId;
             return this;
         }
